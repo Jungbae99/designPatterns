@@ -1,6 +1,4 @@
-package com.me.designPatterns.singleton;
-
-import ch.qos.logback.core.encoder.JsonEscapeUtil;
+package com.me.designPatterns._01_singleton;
 
 public class RuntimeExample {
 

@@ -1,6 +1,4 @@
-package com.me.designPatterns.singleton;
-
-import java.io.Serializable;
+package com.me.designPatterns._01_singleton;
 
 // synchronized, eager initialization, double checked locking, static inner
 public enum Settings {
