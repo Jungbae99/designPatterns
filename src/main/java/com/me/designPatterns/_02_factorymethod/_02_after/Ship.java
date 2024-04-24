@@ -1,9 +1,31 @@
 package com.me.designPatterns._02_factorymethod._02_after;
 
+import com.me.designPatterns._03_abstract_factory._02_after.Anchor;
+import com.me.designPatterns._03_abstract_factory._02_after.Wheel;
+
 public class Ship {
     private String name;
     private String color;
     private String logo;
+
+    public Anchor getAnchor() {
+        return anchor;
+    }
+
+    public void setAnchor(Anchor anchor) {
+        this.anchor = anchor;
+    }
+
+    public Wheel getWheel() {
+        return wheel;
+    }
+
+    public void setWheel(Wheel wheel) {
+        this.wheel = wheel;
+    }
+
+    private Anchor anchor;
+    private Wheel wheel;
 
     public String getName() {
         return name;
@@ -27,5 +49,14 @@ public class Ship {
 
     public void setLogo(String logo) {
         this.logo = logo;
+    }
+
+    @Override
+    public String toString() {
+        return "Ship{" +
+                "name='" + name + '\'' +
+                ", color='" + color + '\'' +
+                ", logo='" + logo + '\'' +
+                '}';
     }
 }

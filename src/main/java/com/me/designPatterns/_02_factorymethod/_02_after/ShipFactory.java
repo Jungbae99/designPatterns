@@ -13,9 +13,7 @@ public interface ShipFactory {
         return ship;
     }
 
-    private void sendEmailTo(String email, Ship ship) {
-        System.out.println(ship.getName() + " 다 만들었습니다.");
-    };
+    void sendEmailTo(String email, Ship ship);
 
     Ship createShip();
 
