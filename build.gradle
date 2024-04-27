@@ -24,6 +24,9 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testCompileOnly 'org.projectlombok:lombok'
 	testAnnotationProcessor 'org.projectlombok:lombok'
+
+	// modelmapper
+	implementation 'org.modelmapper:modelmapper:3.1.0'
 }
 
 tasks.named('bootBuildImage') {
