@@ -1,7 +1,7 @@
-package com.me.designPatterns._05_prototype._01_before;
+package com.me.designPatterns._05_prototype._02_after;
 
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
 
         GithubRepository repository = new GithubRepository();
         repository.setUser("white");
@@ -14,10 +14,10 @@ public class App {
         String url = githubIssue.getUrl();
         System.out.println(url);
 
-//        GithubIssue clone = githubIssue.clone();
+        GithubIssue clone = (GithubIssue) githubIssue.clone();
 
-        // TODO clone != githubIssue
-        // TODO clone.equals(githubIssue) => true
-        
+        System.out.println(clone == githubIssue);
+        System.out.println(clone.equals(githubIssue));
+        System.out.println(clone.getClass() == githubIssue.getClass());
     }
 }
