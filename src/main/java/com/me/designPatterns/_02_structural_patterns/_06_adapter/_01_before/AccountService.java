@@ -1,6 +1,9 @@
 package com.me.designPatterns._02_structural_patterns._06_adapter._01_before;
 
-public class AccountService {
+import com.me.designPatterns._02_structural_patterns._06_adapter._01_before.security.UserDetails;
+import com.me.designPatterns._02_structural_patterns._06_adapter._01_before.security.UserDetailsService;
+
+public class AccountService implements UserDetailsService {
 
     public Account findAccountByUsername(String username) {
         Account account = new Account();
@@ -18,4 +21,8 @@ public class AccountService {
 
     }
 
+    @Override
+    public UserDetails loadUser(String username) {
+        return findAccountByUsername(username);
+    }
 }
